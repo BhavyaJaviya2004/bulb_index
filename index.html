@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <img id="myImage" onclick="changeImage()" src="./bulb.png" width="100" height="180">
+  <img id="myImageOn" onclick="changeImage()" style="display:none;" src="./bulbon.png" width="100" height="180">
+  <script>
+           var total =1;
+	         var cur=0;
+    
+           function changeImage() {
+           cur++;
+           if (total==cur) {
+             var image = document.getElementById('myImage');
+                
+  	  	     var imageon = document.getElementById('myImageOn');
+                 total++;
+                 cur=0;
+  	  	        if(image.style.display=="none")
+                {
+  	  	      	   
+                   image.style.display="block";
+                }
+
+  	  	        else{
+                     
+                    image.style.display="none";
+               
+                }
+  	  	       
+  	  	           if(imageon.style.display=="block"){
+
+  	  	     	      imageon.style.display="none";
+  	  	      }
+  	  	        
+                else{
+                      
+  	  	     	imageon.style.display="block";
+  	  	     	  
+  	  	     }
+
+  	       }
+     }
+    </script>
+
+  </body>
+</html>
